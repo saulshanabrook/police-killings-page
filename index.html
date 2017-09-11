@@ -12,85 +12,54 @@
 
     body {
       min-height: 75rem;
-      padding-top: 7.5rem;
+      padding-top: 4.5rem;
     }
 
   </style>
 </head>
 
 <body>
-
+  <nav class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">Police Fatalities</a>
+   
+  </nav>
   <div class="container-fluid">
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="#">Police Fatalities</a>
-            <span class="navbar-text mr-auto">
-                Filter by changing the inputs below
-            </span>
-      <form class="form-inline small d-flex justify-content-between w-100">
-        <label class="custom-control mb-2 mr-sm-2 mb-sm-0">
-          <label class="mr-sm-2" for="inlineFormCustomSelectPref">Published</label>
-          <input type="date" style="max-width: 14em;" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref" />
-          <label class="mr-sm-2" for="inlineFormCustomSelectPref">-</label>
-          <input type="date" style="max-width: 14em;" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref" />
-        </label>
+    <div class="row">
+      <div class="col-4 col-lg-3 col-xl-2" style="position: fixed;">
+        <form class="small">
 
-        <label class="custom-control mb-2 mr-sm-2 mb-sm-0">
-          <label class="mr-sm-2 ml-2" for="inlineFormCustomSelectPref">Downloaded</label>
-          <input type="date" style="max-width: 14em;" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref" />
-          <label class="mr-sm-2" for="inlineFormCustomSelectPref">-</label>
-          <input type="date" style="max-width: 14em;" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref" />
-        </label>
-
-        <label class="custom-control mb-2 mr-sm-2 mb-sm-0">
-
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-outline-success btn-sm">
-              <input type="radio" name="options" id="option2" autocomplete="off">In Fatal Encounters
-            </label>
-            <label class="btn btn-outline-warning btn-sm">
-              <input type="radio" name="options" id="option3" autocomplete="off"> Not in Fatal Encounters
-            </label>
+          <div class="form-group">
+            <label for="inlineFormCustomSelectPref">Published</label>
+            <input type="date" class="form-control" id="inlineFormCustomSelectPref" />
+            <label for="inlineFormCustomSelectPref">-</label>
+            <input type="date" class="form-control" id="inlineFormCustomSelectPref" />
           </div>
 
-          <button type="button" class="close ml-1 mr-3" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </label>
+          <div class="form-group">
+            <label for="inlineFormCustomSelectPref">Downloaded</label>
+            <input type="date" class="form-control" id="inlineFormCustomSelectPref" />
+            <label for="inlineFormCustomSelectPref">-</label>
+            <input type="date" class="form-control" id="inlineFormCustomSelectPref" />
+          </div>
 
-        <label class="custom-control mb-2 mr-sm-2 mb-sm-0">            
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-outline-secondary btn-sm">
-            <input type="radio" name="options" id="option1" autocomplete="off"> Unknown
-          </label>
-          <label class="btn btn-outline-success btn-sm">
-            <input type="radio" name="options" id="option2" autocomplete="off">Accurate
-          </label>
-          <label class="btn btn-outline-warning btn-sm">
-            <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
-          </label>
-        </div>
-        <button type="button" class="close ml-1 mr-3" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        </label>
-
-
-      </form>
-    </nav>
-    <div id="accordion" role="tablist">
-
-      <div class="card">
-        <div class="card-header">
-          <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <h5 class="mb-auto mt-auto">
-              <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Daniel Gillis
-              </a>
-            </h5>
-            <div class="card-text text-warning">Not in Fatal Encounters</div>
+          <div class="form-group">
             <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-outline-secondary btn-sm active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
+              <label class="btn btn-outline-success btn-sm">
+                <input type="radio" name="options" id="option2" autocomplete="off">In FE 
+              </label>
+              <label class="btn btn-outline-warning btn-sm">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Not in FE
+              </label>
+            </div>
+            <button type="button" class="close ml-1 mr-3" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="form-group">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-outline-secondary btn-sm">
+                <input type="radio" name="options" id="option1" autocomplete="off"> Unknown
               </label>
               <label class="btn btn-outline-success btn-sm">
                 <input type="radio" name="options" id="option2" autocomplete="off">Accurate
@@ -99,303 +68,334 @@
                 <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
               </label>
             </div>
+            <button type="button" class="close ml-1 mr-3" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </div>
-        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">As the investigation continues into the fatal police shooting of
-                  <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
-                  been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
-                <footer class="blockquote-footer small">
-                  <span class="small">
-                    Published in
-                    <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
-                      https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
-                    </a>(
-                    <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
-                  </span>
-                </footer>
-              </blockquote>
-            </li>
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">As the investigation continues into the fatal police shooting of
-                  <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
-                  been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
-                <footer class="blockquote-footer small">
-                  <span class="small">
-                    Published in
-                    <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
-                      https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
-                    </a>(
-                    <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
-                  </span>
-                </footer>
-              </blockquote>
 
-            </li>
-          </ul>
-        </div>
+        </form>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <h5 class="mb-auto mt-auto">
-              <a data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Daniel Gillis
-              </a>
-            </h5>
-            <div class="card-text text-warning">Not in Fatal Encounters</div>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-outline-secondary btn-sm active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
-              </label>
-              <label class="btn btn-outline-success btn-sm">
-                <input type="radio" name="options" id="option2" autocomplete="off">Accurate
-              </label>
-              <label class="btn btn-outline-warning btn-sm">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
-              </label>
+      <div id="accordion" role="tablist" class="col-8 col-lg-9 col-xl-10 ml-sm-auto">
+        
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-auto mt-auto">
+                      <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Daniel Gillis
+                      </a>
+                    </h5>
+                    <div class="card-text text-warning">Not in Fatal Encounters</div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-outline-secondary btn-sm active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
+                      </label>
+                      <label class="btn btn-outline-success btn-sm">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Accurate
+                      </label>
+                      <label class="btn btn-outline-warning btn-sm">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">As the investigation continues into the fatal police shooting of
+                          <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
+                          been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
+                        <footer class="blockquote-footer small">
+                          <span class="small">
+                            Published in
+                            <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
+                              https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
+                            </a>(
+                            <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
+                          </span>
+                        </footer>
+                      </blockquote>
+                    </li>
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">As the investigation continues into the fatal police shooting of
+                          <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
+                          been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
+                        <footer class="blockquote-footer small">
+                          <span class="small">
+                            Published in
+                            <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
+                              https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
+                            </a>(
+                            <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
+                          </span>
+                        </footer>
+                      </blockquote>
+        
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-auto mt-auto">
+                      <a data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Daniel Gillis
+                      </a>
+                    </h5>
+                    <div class="card-text text-warning">Not in Fatal Encounters</div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-outline-secondary btn-sm active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
+                      </label>
+                      <label class="btn btn-outline-success btn-sm">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Accurate
+                      </label>
+                      <label class="btn btn-outline-warning btn-sm">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">As the investigation continues into the fatal police shooting of
+                          <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
+                          been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
+                        <footer class="blockquote-footer small">
+                          Published in
+                          <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
+                            https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
+                          </a> (
+                          <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
+                        </footer>
+                      </blockquote>
+                    </li>
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer">Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+        
+                    </li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-auto mt-auto">
+                      <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Daniel Gillis
+                      </a>
+                    </h5>
+                    <div class="card-text text-warning">Not in Fatal Encounters</div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-outline-secondary btn-sm active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
+                      </label>
+                      <label class="btn btn-outline-success btn-sm">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Accurate
+                      </label>
+                      <label class="btn btn-outline-warning btn-sm">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">As the investigation continues into the fatal police shooting of
+                          <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
+                          been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
+                        <footer class="blockquote-footer small">
+                          Published in
+                          <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
+                            https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
+                          </a> (
+                          <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
+                        </footer>
+                      </blockquote>
+                    </li>
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer">Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+        
+                    </li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-auto mt-auto">
+                      <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Daniel Gillis
+                      </a>
+                    </h5>
+                    <div class="card-text text-warning">Not in Fatal Encounters</div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-outline-secondary btn-sm active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
+                      </label>
+                      <label class="btn btn-outline-success btn-sm">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Accurate
+                      </label>
+                      <label class="btn btn-outline-warning btn-sm">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">As the investigation continues into the fatal police shooting of
+                          <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
+                          been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
+                        <footer class="blockquote-footer small">
+                          Published in
+                          <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
+                            https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
+                          </a> (
+                          <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
+                        </footer>
+                      </blockquote>
+                    </li>
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer">Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+        
+                    </li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-auto mt-auto">
+                      <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Daniel Gillis
+                      </a>
+                    </h5>
+                    <div class="card-text text-warning">Not in Fatal Encounters</div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-outline-secondary btn-sm active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
+                      </label>
+                      <label class="btn btn-outline-success btn-sm">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Accurate
+                      </label>
+                      <label class="btn btn-outline-warning btn-sm">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">As the investigation continues into the fatal police shooting of
+                          <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
+                          been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
+                        <footer class="blockquote-footer small">
+                          Published in
+                          <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
+                            https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
+                          </a> (
+                          <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
+                        </footer>
+                      </blockquote>
+                    </li>
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer">Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+        
+                    </li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-auto mt-auto">
+                      <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Daniel Gillis
+                      </a>
+                    </h5>
+                    <div class="card-text text-warning">Not in Fatal Encounters</div>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-outline-secondary btn-sm active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
+                      </label>
+                      <label class="btn btn-outline-success btn-sm">
+                        <input type="radio" name="options" id="option2" autocomplete="off">Accurate
+                      </label>
+                      <label class="btn btn-outline-warning btn-sm">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">As the investigation continues into the fatal police shooting of
+                          <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
+                          been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
+                        <footer class="blockquote-footer small">
+                          Published in
+                          <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
+                            https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
+                          </a> (
+                          <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
+                        </footer>
+                      </blockquote>
+                    </li>
+                    <li class="list-group-item">
+                      <blockquote class="blockquote mb-0">
+                        <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer">Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </footer>
+                      </blockquote>
+        
+                    </li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                </div>
+              </div>
+        
             </div>
-          </div>
-        </div>
-        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">As the investigation continues into the fatal police shooting of
-                  <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
-                  been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
-                <footer class="blockquote-footer small">
-                  Published in
-                  <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
-                    https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
-                  </a> (
-                  <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
-                </footer>
-              </blockquote>
-            </li>
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
-              </blockquote>
-
-            </li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <h5 class="mb-auto mt-auto">
-              <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Daniel Gillis
-              </a>
-            </h5>
-            <div class="card-text text-warning">Not in Fatal Encounters</div>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-outline-secondary btn-sm active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
-              </label>
-              <label class="btn btn-outline-success btn-sm">
-                <input type="radio" name="options" id="option2" autocomplete="off">Accurate
-              </label>
-              <label class="btn btn-outline-warning btn-sm">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
-              </label>
-            </div>
-          </div>
-        </div>
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">As the investigation continues into the fatal police shooting of
-                  <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
-                  been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
-                <footer class="blockquote-footer small">
-                  Published in
-                  <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
-                    https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
-                  </a> (
-                  <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
-                </footer>
-              </blockquote>
-            </li>
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
-              </blockquote>
-
-            </li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <h5 class="mb-auto mt-auto">
-              <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Daniel Gillis
-              </a>
-            </h5>
-            <div class="card-text text-warning">Not in Fatal Encounters</div>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-outline-secondary btn-sm active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
-              </label>
-              <label class="btn btn-outline-success btn-sm">
-                <input type="radio" name="options" id="option2" autocomplete="off">Accurate
-              </label>
-              <label class="btn btn-outline-warning btn-sm">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
-              </label>
-            </div>
-          </div>
-        </div>
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">As the investigation continues into the fatal police shooting of
-                  <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
-                  been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
-                <footer class="blockquote-footer small">
-                  Published in
-                  <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
-                    https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
-                  </a> (
-                  <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
-                </footer>
-              </blockquote>
-            </li>
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
-              </blockquote>
-
-            </li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <h5 class="mb-auto mt-auto">
-              <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Daniel Gillis
-              </a>
-            </h5>
-            <div class="card-text text-warning">Not in Fatal Encounters</div>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-outline-secondary btn-sm active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
-              </label>
-              <label class="btn btn-outline-success btn-sm">
-                <input type="radio" name="options" id="option2" autocomplete="off">Accurate
-              </label>
-              <label class="btn btn-outline-warning btn-sm">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
-              </label>
-            </div>
-          </div>
-        </div>
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">As the investigation continues into the fatal police shooting of
-                  <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
-                  been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
-                <footer class="blockquote-footer small">
-                  Published in
-                  <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
-                    https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
-                  </a> (
-                  <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
-                </footer>
-              </blockquote>
-            </li>
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
-              </blockquote>
-
-            </li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <div class="d-flex justify-content-between align-items-center flex-wrap">
-            <h5 class="mb-auto mt-auto">
-              <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Daniel Gillis
-              </a>
-            </h5>
-            <div class="card-text text-warning">Not in Fatal Encounters</div>
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-outline-secondary btn-sm active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Unknown
-              </label>
-              <label class="btn btn-outline-success btn-sm">
-                <input type="radio" name="options" id="option2" autocomplete="off">Accurate
-              </label>
-              <label class="btn btn-outline-warning btn-sm">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Innacurate
-              </label>
-            </div>
-          </div>
-        </div>
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">As the investigation continues into the fatal police shooting of
-                  <mark>Daniel Gillis</mark> in Pittsfield , the Berkshire district attorney 's office said Sunday that he had
-                  been shot seven times by an officer responding to a domestic incident Friday afternoon .</p>
-                <footer class="blockquote-footer small">
-                  Published in
-                  <a style="max-width: 30%;" class="d-inline-block text-truncate align-bottom" href="https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html">
-                    https://www.bostonglobe.com/metro/2017/09/03/berkshire-district-attorney-office-says-police-shot-pittsfield-man-seven-times/qSmNkwEacXgvjD6ucMb0zK/story.html
-                  </a> (
-                  <a href="whatever">cached</a>) on September 9th, 2017 and downloaded September 10th, 2017.
-                </footer>
-              </blockquote>
-            </li>
-            <li class="list-group-item">
-              <blockquote class="blockquote mb-0">
-                <p class="mb-0 small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Someone famous in
-                  <cite title="Source Title">Source Title</cite>
-                </footer>
-              </blockquote>
-
-            </li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
+
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
